@@ -49,7 +49,7 @@ function ArticlePageEditor() {
                 
                         <div className="break-words bg-gray-300 border-2 m-2 active:cursor-pointer active:bg-gray-500" onClick={async (event)=>{
                             try {
-                                await navigator.clipboard.writeText(event.currentTarget.innerText)
+                                await navigator.clipboard.writeText(event.currentTarget.innerText.replace("\"","\\\""))
                             } catch (e) {
 
                             }
